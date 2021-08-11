@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var tarih = new Date();
+      document.write(tarih + "<br/>");
+      var tarih1 = new Date(2011, 11, 7, 21, 15, 45);
+      document.write(tarih1 + "<br/>");
+      var tarih0 = new Date();
+      var yıl = tarih0.getFullYear();
+      document.write(yıl + "<br/>");
+      var tarih00 = new Date();
+      var yıl0 = tarih00.getMonth();
+      document.write(yıl0 + "<br/>");
+
+      var zaman = new Date();
+      var ay = zaman.getMonth();
+      if (ay == "0") {
+        var ayiyaz = "ocak";
+      } else if (ay == "1") {
+        var ayiyaz = "şubat";
+      } else if (ay == "2") {
+        var ayiyaz = "mart";
+      } else if (ay == "3") {
+        var ayiyaz = "nisan";
+      } else if (ay == "4") {
+        var ayiyaz = "mayıs";
+      } else if (ay == "5") {
+        var ayiyaz = "haziran";
+      } else if (ay == "6") {
+        var ayiyaz = "temmuz";
+      } else if (ay == "7") {
+        var ayiyaz = "ağustos";
+      } else if (ay == "8") {
+        var ayiyaz = "eylül";
+      } else if (ay == "9") {
+        var ayiyaz = "ekim";
+      } else if (ay == "10") {
+        var ayiyaz = "kasım";
+      } else if (ay == "11") {
+        var ayiyaz = "aralık";
+      } else {
+        var ayiyaz = "hata";
+      }
+      document.write(ayiyaz + "<br/>");
+
+      var zaman = new Date();
+      var gun = zaman.getDate();
+      document.write(gun + "<br/>");
+
+      var zaman0 = new Date();
+      var gün0 = zaman0.getDay();
+      document.write(gün0 + "<br/>");
+
+      var zaman1 = new Date();
+      var saat = zaman1.getHours();
+      document.write(saat + "<br/>");
+
+      var zaman00 = new Date();
+      var dakika = zaman00.getMinutes();
+      document.write(dakika + "<br/>");
+      var saniye = zaman0.getSeconds();
+      document.write(saniye + "<br/>");
+      var milisaniye = zaman00.getMilliseconds();
+      document.write(milisaniye + "<br/>");
+
+      var evrenselyil = zaman00.getUTCFullYear();
+      document.write(evrenselyil + "<br/>");
+      var evrenselay = zaman00.getUTCMonth();
+      document.write(evrenselay + "<br/>");
+      var evrenselgün = zaman00.getUTCDate();
+      document.write(evrenselgün + "<br/>");
+      var evrenselhafta = zaman00.getUTCDay();
+      document.write(evrenselhafta + "<br/>");
+      var evrenselgününsaat = zaman00.getUTCHours();
+      document.write(evrenselgününsaat + "<br/>");
+      var evrenselsaatdakikaksı = zaman00.getUTCMinutes();
+      document.write(evrenselsaatdakikaksı + "<br/>");
+      var evrenseldakikasaniyesi = zaman00.getUTCSeconds();
+      document.write(evrenseldakikasaniyesi + "<br/>");
+      var evrenselmilisaniye = zaman00.getUTCMilliseconds();
+      document.write(evrenselmilisaniye + "<br/>");
+
+      var zaman = new Date();
+      zaman.setFullYear(2051);
+      document.write(zaman + "<br/>");
+      zaman.setFullYear(2057, 10, 7);
+      document.write(zaman + "<br/>");
+      var zaman11 = new Date();
+      zaman11.setMonth(0);
+      document.write(zaman11 + "<br/>");
+      zaman11.setMonth(3, 21);
+      document.write(zaman11 + "<br/>");
+      zaman11.setDate(12);
+      document.write(zaman11 + "<br/>");
+      zaman11.setHours(08);
+      document.write(zaman11 + "<br/>");
+      zaman11.setMinutes(33);
+      document.write(zaman11 + "<br/>");
+      zaman11.setSeconds(41);
+      document.write(zaman11 + "<br/>");
+
+      var zaman = new Date();
+      document.write(zaman + "<br/>");
+      var sonuc = zaman.getTime();
+      document.write(sonuc + "<br/>");
+      zaman.setTime(1622062021461);
+      document.write(zaman + "<br/>");
+      zaman.setTime(-1622062255332);
+      document.write(zaman);
+
+      var zaman = Date.now();
+      document.write(zaman + "<br/>");
+      var zaman1 = Date.UTC(2011, 21, 5);
+      document.write(zaman1 + "<br/>");
+    </script>
+  </body>
+</html>

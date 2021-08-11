@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var bilgiler = {
+        detay: function () {
+          var isim = "CEYHUN";
+          var soyisim = "YILDIRIM";
+          var islem = isim + " " + soyisim;
+          return islem;
+        },
+      };
+      var sonuc = bilgiler.detay();
+      document.write(sonuc);
+
+      var ad = "CEYHUN";
+      var soyad = "YILDIRIM";
+      var metin = "javascript";
+
+      var bilgiler = {
+        isim: ad,
+        soyisim: soyad,
+        detay: function () {
+          var ifade = metin;
+          document.write(ifade + "<br/>");
+        },
+      };
+
+      var yisim = bilgiler.isim;
+      var ysoyadı = bilgiler.soyisim;
+
+      document.write(yisim + " " + ysoyadı + "<br/>");
+      bilgiler.detay();
+
+      var bilgiler = {
+        isim: "CEYHUN",
+        soyad: "YILDIRIM",
+        dogum: 1993,
+      };
+
+      var yisim = bilgiler.isim;
+      var ysoyadı = bilgiler.soyad;
+      var ydogum = bilgiler.dogum;
+
+      document.write(yisim + " " + ysoyadı + " " + ydogum + "<br/>");
+
+      bilgiler.meslek = "GAZETECİ";
+      bilgiler.il = "İSTANBUL";
+
+      var ymeslek = bilgiler.meslek;
+      var yil = bilgiler.il;
+      document.write(ymeslek + " " + yil);
+
+      bilgiler.ekdetay = function () {
+        alert("İŞLEM TAMAMLANDI...");
+      };
+      bilgiler.ekdetay();
+
+      var kisi = {
+        degerler: function (isim, soyisim, yas) {
+          var isimicerigi = isim;
+          var soyisimicerigi = soyisim;
+          var yasicerigi = yas;
+          var metin = isimicerigi + " " + soyisimicerigi + " " + yasicerigi;
+          return metin;
+        },
+      };
+      var sonuc = kisi.degerler("CEYHUN", "YILDIRIM", 23 + "<br/>");
+      document.write(sonuc);
+
+      var sonuc = kisi.degerler("AKİF", "KAYA", 21);
+      document.write(sonuc);
+
+      function demo(isimdegeri, soyisimdegeri) {
+        this.isim = isimdegeri;
+        this.soyisim = soyisimdegeri;
+      }
+      var sonuc = new demo("CEYHUN", "YILDIRIM");
+
+      var gelenisim = sonuc.isim;
+      var gelensyisim = sonuc.soyisim;
+      document.write(gelenisim + " " + gelensyisim);
+
+      function demo(isim, soyisim, yas, meslek, sehir) {
+        this.isimözelligi = isim;
+        this.soyisimözelligi = soyisim;
+        this.yasözelligi = yas;
+        this.mesleközelligi = meslek;
+        this.sehirözelligi = sehir;
+        this.islem = function (yeniisim, yeniyas, yenisehir) {
+          this.isimözelligi = yeniisim;
+          this.yasözelligi = yeniyas;
+          this.sehirözelligi = yenisehir;
+        };
+      }
+      var sonuc = new demo("CEYHUN", "YILDIRIM", 23, "GAZETECİ", "İSTANBUL");
+      sonuc.islem("AKİF", 19, "ANKARA");
+      document.write(
+        sonuc.isimözelligi +
+          " " +
+          sonuc.soyisimözelligi +
+          " " +
+          sonuc.yasözelligi +
+          " " +
+          sonuc.mesleközelligi +
+          " " +
+          sonuc.sehirözelligi
+      );
+
+      var bilgiler = {
+        isim: "CEYHUN",
+        soyad: "YILDIRIM",
+        dogum: 1993,
+        il: "istanbul",
+        meslek: "Gazeteci",
+      };
+
+      for (var sonuc in bilgiler) {
+        var özellik = sonuc;
+        var deger = bilgiler[sonuc];
+        document.write(özellik + " : " + deger + "<br/>");
+      }
+
+      var bilgiler = {
+        isim: "ceyhun",
+        soyadı: "yıldırım",
+        detay: {
+          yas: 23,
+          il: "istanbul",
+          diller: {
+            meslek: "gazeteci",
+            bdil: "javascript",
+          },
+        },
+      };
+
+      var isimd = bilgiler.isim;
+      var soyadd = bilgiler.soyadı;
+      document.write(isimd + " " + soyadd + "<br/>");
+      var yasdetaydegeri = bilgiler.detay.yas;
+      var ildetaydegeri = bilgiler.detay.il;
+      document.write(yasdetaydegeri + " " + ildetaydegeri + "<br/>");
+      var meslekdetaydegeri = bilgiler.detay.diller.meslek;
+      var dildetaydegeri = bilgiler.detay.diller.bdil;
+      document.write(meslekdetaydegeri + " " + dildetaydegeri);
+
+      function bilgiler(isim, sisim, yas, il) {
+        this.yisim = isim;
+        this.ysisim = sisim;
+        this.yyas = yas;
+        this.yil = il;
+      }
+
+      bilgiler.prototype.islem = function () {
+        return (
+          this.yisim + " " + this.ysisim + " " + this.yyas + " " + this.yil
+        );
+      };
+
+      var yazdır = new bilgiler("ceyhun", "yıldırım", 21, "istanbul");
+
+      var sonuc = yazdır.islem();
+      document.write(sonuc + "<br/>");
+
+      function isim(s1, s2, s3) {
+        this.sayı1 = s1;
+        this.sayı2 = s2;
+        this.sayı3 = s3;
+      }
+
+      isim.prototype.islem0 = function () {
+        return this.sayı1 + this.sayı2 + this.sayı3;
+      };
+
+      var yazdır0 = new isim(10, 20, 30);
+
+      var sonuc0 = yazdır0.islem0();
+      document.write(sonuc0);
+
+      function bilgiler() {
+        isim: "ceyhun";
+      }
+      var sonuc = new bilgiler();
+
+      var kontrol = bilgiler.prototype.isPrototypeOf(sonuc);
+      document.write(kontrol);
+    </script>
+  </body>
+</html>

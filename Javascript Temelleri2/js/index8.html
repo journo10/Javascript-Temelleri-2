@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var renkler = ["siyah", "beyaz", "mavi", "yesil", "kırmızı"];
+      document.write("dizinin ilk hali:" + renkler + "<br/>" + "<br/>");
+
+      var islem = renkler.splice(1, 1);
+      document.write("dizinin bir sonraki hali:" + renkler + "<br/>");
+      document.write("silinen eleman:" + islem + "<br/>" + "<br/>");
+
+      var islem2 = renkler.splice(1);
+      document.write(renkler + "<br/>");
+      document.write("silinen elemanlar:" + islem2 + "<br/>" + "<br/>");
+
+      var islem3 = renkler.splice(1, 0);
+      document.write(renkler + "<br/>");
+      document.write(
+        "herhangi bir eleman silinmez bu şekilde" + islem3 + "<br/>" + "<br/>"
+      );
+
+      var ornek = ["mavi", "yesil", "siyah", "beyaz"];
+      document.write(ornek + "<br/>" + "<br/>");
+
+      var sonuc = ornek.splice(1, 0, "kırmızı", "pembe", "gri");
+      document.write(ornek);
+
+      var ornek2 = ["sarı", "kırmızı", "yesil", "mavi"];
+      document.write(ornek2 + "<br/>");
+
+      var sonuc2 = ornek2.splice(2, 2, "turuncu", "gri", "pembe");
+      document.write(ornek2 + "<br/>");
+
+      var sayi = [
+        "bir",
+        "iki",
+        "üç",
+        "dört",
+        "beş",
+        "altı",
+        "yedi",
+        "sekiz",
+        "dokuz",
+        "on",
+      ];
+      document.write(sayi + "<br/>");
+
+      var sonuc = sayi.slice(3);
+      document.write(sonuc + "<br/>");
+
+      var sonuc2 = sayi.slice(2, 7);
+      document.write(sonuc2);
+
+      var sonuc3 = sayi.slice(3, -2);
+      document.write(sonuc3);
+
+      var sonuc4 = sayi.slice(-7, -3);
+      document.write(sonuc4);
+
+      var sonuc5 = sayi.slice(-8);
+      document.write(sonuc5);
+
+      var isimler = [
+        "akif",
+        "mehmet",
+        "murat",
+        "onur",
+        "ibrahim",
+        "mustafa",
+        "cihan",
+        "ceyhun",
+        "halil",
+        "volkan",
+        "ahmet",
+        "ali",
+        "ömer",
+      ];
+      document.write(isimler + "<br/>" + "<br/>");
+
+      isimler.copyWithin(5);
+      document.write(isimler);
+
+      isimler.copyWithin(5, 8);
+      document.write(isimler);
+
+      isimler.copyWithin(3, 5, 8);
+      document.write(isimler);
+    </script>
+  </body>
+</html>

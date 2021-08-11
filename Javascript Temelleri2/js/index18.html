@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <div class="sınıf">YAZILIM DİLLERİ</div>
+  <div class="sınıf1">HTML</div>
+  <div class="sınıf2">CSS</div>
+  <div class="sınıf3">JAVASCRİPT</div>
+  <div class="sınıf4">REACT JS</div>
+  <div id="sınıf5"></div>
+  <button onclick="demo()">TIKLA</button>
+  <body>
+    <script>
+      document.addEventListener("click", function () {
+        document.write("Giriş Yapıldı...");
+      });
+
+      document.addEventListener("click", function () {
+        alert("giriş yapıldı...");
+      });
+
+      document.addEventListener("click", örnek);
+      function örnek() {
+        alert("giriş yapıldı");
+        document.removeEventListener("click", örnek);
+      }
+
+      function demo() {
+        document.querySelector(".sınıf").style.color = "red";
+        document.querySelector("div.sınıf4").style.color = "blue";
+        document.querySelector("#sınıf5").innerHTML = "ANGULAR";
+      }
+    </script>
+  </body>
+</html>

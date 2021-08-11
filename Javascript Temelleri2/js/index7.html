@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var renkler = ["sarı", "mavi", "yeşil", "kırmızı"];
+      document.write(renkler + "<br/>");
+      document.write(renkler[0] + "<br/>");
+      document.write(renkler[1] + "<br/>");
+      document.write(renkler[2] + "<br/>");
+      document.write(renkler[3] + "<br/>");
+      var sonuc;
+
+      for (sonuc in renkler) {
+        document.write(renkler[sonuc]);
+      }
+
+      var renkler = [
+        "sarı",
+        "mavi",
+        ["pembe", "lila", "mor", "bordo"],
+        "yesil",
+        "kırmızı",
+      ];
+      document.write(renkler + "<br/>");
+
+      var sonuc = renkler.length;
+      document.write(sonuc + "<br/>");
+      var sonuc1 = renkler[2].length;
+      document.write(sonuc1 + "<br/>");
+      var sonuc2 = renkler[2][2].length;
+      document.write(sonuc2);
+
+      var esyalar = ["yatak", "dolap", "sandalye", "sehpa", "çamasır makinası"];
+      document.write(esyalar + "<br/>" + "<br/>");
+
+      delete esyalar[1];
+      document.write(esyalar + "<br/>" + "<br/>");
+      delete esyalar[3];
+      document.write(esyalar + "<br/>");
+
+      var isimler = ["akif", "ceyhun", "ali", "murat"];
+      document.write(isimler + "<br/>" + "<br/>");
+
+      var sonuc = isimler.pop();
+
+      document.write(sonuc + "<br/>" + "<br/>");
+      document.write(isimler);
+
+      var renkler = [
+        "mavi",
+        "sarı",
+        "yesil",
+        "kırmızı",
+        "pembe",
+        "siyah",
+        "beyaz",
+      ];
+      document.write("dizinin ilk hali:" + renkler + "<br/>");
+
+      var son = renkler.shift();
+      document.write("diziden silinen renk:" + son + "<br/>");
+      document.write("dizinin son hali:" + renkler + "<br/>");
+
+      document.write("dizinin ilk hali:" + renkler + "<br/>");
+
+      var son = renkler.shift();
+      document.write("diziden silinen renk:" + son + "<br/>");
+      document.write("dizinin son hali:" + renkler + "<br/>" + "<br/>");
+
+      var son1 = renkler.push("bordo", "kahve", "lila");
+      document.write(renkler + "<br/>");
+      document.write(son1 + "<br/>" + "<br/>");
+
+      var son2 = renkler.unshift("renk1", "renk2", "renk3");
+      document.write(renkler + "<br/>");
+      document.write(son2 + "<br/>" + "<br/>");
+
+      var son3 = renkler.splice(1, 1);
+      document.write("silenen eleman :" + son3 + "<br/>");
+      document.write(renkler + "<br/>" + "<br/>");
+
+      var son4 = renkler.splice(1, 0, "renk5");
+      document.write("eklenen renk :" + son4 + "<br/>");
+      document.write(renkler + "<br/>" + "<br/>");
+    </script>
+  </body>
+</html>

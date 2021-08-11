@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var meyveler = [
+        "elma",
+        "armut",
+        "karpuz",
+        "nar",
+        "muz",
+        "mandalina",
+        "erik",
+        "kayısı",
+      ];
+      document.write(meyveler + "<br/>");
+
+      meyveler.fill("çilek");
+      document.write(meyveler);
+
+      meyveler.fill("çilek", 2, 5);
+      document.write(meyveler);
+
+      meyveler.fill("çilek", 3);
+      document.write(meyveler);
+
+      var erkek = ["akif", "ceyhun", "ömer", "sinan"];
+      var kadın = [
+        "gizem",
+        "hilal",
+        ["ayşe", "songül", "elif"],
+        "hatice",
+        "büşra",
+      ];
+      var renk = ["kırmızı", "mavi", "beyaz", "siyah"];
+      document.write(erkek + "<br/>");
+      document.write(kadın + "<br/>");
+
+      var yaz = erkek.concat(kadın);
+      document.write(yaz);
+
+      var yaz1 = erkek.concat(kadın, renk);
+      document.write(yaz1);
+
+      var yaz2 = erkek.concat(kadın[2]);
+      document.write(yaz2 + "<br/>");
+      var yaz3 = erkek.concat(kadın[1], kadın[4]);
+      document.write(yaz3 + "<br/>");
+
+      var yaz4 = erkek.concat(renk, kadın[2][1]);
+      document.write(yaz4 + "<br/>");
+      var yaz5 = erkek.concat(renk, kadın[2]);
+      document.write(yaz5 + "<br/>");
+
+      var renkler = ["mavi", "yaşil", "beyaz", "siyah"];
+      var kontrol1 = Array.isArray(renkler);
+      document.write("(" + kontrol1 + ")" + renkler + "<br/>");
+      var tip0 = typeof renkler;
+      document.write(tip0 + "<br/>" + "<br/>");
+
+      var islem = renkler.join();
+      var kontrol2 = Array.isArray(islem);
+      document.write("(" + kontrol2 + " )" + islem + "<br/>");
+
+      var islem2 = renkler.join(" ve ");
+      document.write(islem2 + "<br/>" + "<br/>");
+
+      var islem3 = renkler.toString();
+      var tip = typeof islem3;
+      document.write(tip + "<br/>");
+      document.write(islem3 + "<br/>");
+
+      var isimler = [
+        "akif",
+        "ömer",
+        "mustafa",
+        "mustafa",
+        "mustafa",
+        "cihan",
+        "cihan",
+        "cihan",
+      ];
+      document.write(isimler + "<br/>");
+
+      var yeni = isimler.valueOf();
+      document.write(yeni + "<br/>");
+
+      isimler.fill("songül");
+      document.write(isimler + "<br/>");
+      document.write(yeni);
+
+      var yeni0 = isimler.indexOf("mustafa");
+      document.write(yeni0 + "<br/>");
+
+      var yeni1 = isimler.lastIndexOf("cihan");
+      document.write(yeni1 + "<br/>");
+
+      function deneme(birnciP, ikinciP, üçüncüP) {
+        return ikinciP == 3;
+      }
+
+      var sayı = ["siyah", "beyaz", "mavi", "yesil", "kırmızı"];
+      document.write(sayı + "<br/>");
+
+      var yeni00 = sayı.find(deneme);
+      document.write(yeni00 + "<br/>");
+
+      var yeni01 = sayı.findIndex(deneme);
+      document.write(yeni01 + "<br/>");
+
+      function biriki(P1, P2, P3) {
+        return P2 == 4;
+      }
+
+      var meyveler = [
+        "karpuz",
+        "çilek",
+        "armut",
+        "muz",
+        "kavun",
+        "nar",
+        "kivi",
+        "erik",
+      ];
+      document.write(meyveler + "<br/>");
+
+      var sonuc = meyveler.findIndex(biriki);
+      document.write(sonuc + "<br/>");
+
+      var sonuc1 = meyveler.find(biriki);
+      document.write(sonuc1 + "<br/>");
+
+      function akif(deger, eleman, sıra, degişken) {
+        return deger + eleman;
+      }
+
+      var sayılar = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+      document.write(sayılar + "<br/>");
+
+      var s1 = sayılar.reduce(akif);
+      document.write(s1 + "<br/>" + "<br/>");
+
+      var harf = ["a", "b", "c", "d", "e", "f"];
+      document.write(harf + "<br/>");
+
+      var s2 = harf.reduce(akif);
+      document.write(s2 + "<br/>");
+
+      var s3 = harf.reduceRight(akif);
+      document.write(s3 + "<br/>");
+
+      var meyveler = ["karpuz", "muz", "nar", "çilek", "kivi", "erik"];
+      document.write(meyveler + "<br/>");
+
+      var meyv1 = meyveler.reverse();
+      document.write(meyv1 + "<br/>");
+
+      var isimler = ["akif", "ceyhun", "umut", "cihan"];
+      document.write(isimler + "<br/>");
+      isimler.sort();
+      document.write(isimler + "<br/>" + "<br/>");
+
+      var rakamlar = [1, 100, 5.5, 20, 3.14, 43, 51, 301];
+      document.write(rakamlar + "<br/>");
+      rakamlar.sort();
+      document.write(rakamlar + "<br/>" + "<br/>");
+
+      var karısık = ["akif", 2.1, "*", "ceyhun", "53", "!"];
+      document.write(karısık + "<br/>");
+      karısık.sort();
+      document.write(karısık + "<br/>" + "<br/>");
+
+      function sıra(a, b) {
+        return a - b;
+      }
+      var rakamlar1 = [1, 100, 5.5, 20, 3.14, 43, 51, 301];
+      document.write(rakamlar1 + "<br/>");
+      rakamlar1.sort(sıra);
+      document.write(rakamlar1 + "<br/>" + "<br/>");
+    </script>
+  </body>
+</html>

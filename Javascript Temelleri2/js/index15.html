@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>Ceyhun YILDIRIM</div>
+    <p>GAZETECİLİK</p>
+    <ul>
+      <li>1.Ders</li>
+      <li>2.Ders</li>
+      <li>3.Ders</li>
+      <li>4.Ders</li>
+    </ul>
+    <div id="enson"></div>
+    <script>
+      var sonuc = document.getElementsByTagName("div")[0].innerHTML;
+      document.getElementById("enson").innerHTML = sonuc;
+
+      var sonuc0 = document.getElementsByTagName("p")[0].innerHTML;
+      document.getElementById("enson").innerHTML = sonuc0;
+
+      var sonuc00 = document.getElementsByTagName("ul")[0].innerHTML;
+      document.getElementById("enson").innerHTML = sonuc00;
+
+      document.getElementsByTagName("li")[2].innerHTML = "istanbul";
+
+      var i = document.getElementsByTagName("li");
+      var i1 = document.getElementsByTagName("li").length;
+      for (baslangıc = 0; baslangıc < i1; baslangıc++) {
+        document.getElementById("enson").innerHTML +=
+          i[baslangıc].innerHTML + "<br/>";
+      }
+    </script>
+  </body>
+</html>

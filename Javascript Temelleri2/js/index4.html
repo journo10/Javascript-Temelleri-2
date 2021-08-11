@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function deneme() {
+        var tapla = 8 + 5;
+        document.write(tapla + "<br/>");
+      }
+      deneme();
+
+      function akif1() {
+        var çikar = 7 - 4;
+        document.write(çikar + "<br/>");
+      }
+      akif1();
+
+      function mehmet1() {
+        var çarp = 8 * 3;
+        document.write(çarp + "<br/>");
+      }
+      mehmet1();
+
+      function ceyhun1() {
+        var böl = 45 / 9;
+        document.write(böl);
+      }
+      ceyhun1();
+
+      var deneme = function () {
+        document.write("merhaba akif" + "<br/>");
+      };
+      deneme();
+
+      var sayi = function () {
+        document.write("taplama çıkarma çarpma bölme");
+      };
+      sayi();
+
+      var isim = "akif" + "<br/>";
+      var soyisim = "bağatur" + "<br/>";
+
+      function deneme() {
+        document.write(isim + soyisim);
+      }
+      deneme();
+      var i1 = "java";
+      var i2 = "script" + "<br/>";
+      function birlestirme() {
+        document.write(i1 + i2);
+      }
+      birlestirme();
+
+      var i3 = "ceyhun";
+      var i4 = "gazetecilik";
+      var deneme1 = function () {
+        document.write(i3 + i4);
+      };
+      deneme1();
+
+      function deneme() {
+        var i = "mehmet" + "<br/>";
+        var i2 = "gazeteci";
+        return i;
+      }
+      var sonuc = deneme();
+      document.write(sonuc);
+
+      function deneme1() {
+        var is = "akif";
+        var is2 = "gazetecilik" + "<br/>";
+        return is2;
+      }
+      var sonuç2 = deneme1();
+      document.write(sonuç2);
+
+      function deneme3() {
+        var isi = "mehmet akif";
+        var isi2 = "gazetecilik2";
+        var coklu = [isi, isi2];
+        return coklu;
+      }
+      var sonuc3 = deneme3();
+      document.write(sonuc3);
+
+      (function deneme() {
+        document.write("merhaba" + "<br/>");
+      })();
+
+      var deneme1 = (function () {
+        document.write("merhaba2");
+      })();
+
+      function deneme(isim) {
+        document.write("merhaba " + isim + " nasılsın iyimisin" + "<br/>");
+      }
+      deneme("akif");
+
+      var deneme1 = function (is) {
+        document.write("merhaba " + is + " gazeteci");
+      };
+      deneme1("mehmet");
+
+      function alim(tutar, kdv = 18) {
+        var kdvtutari = (tutar / 100) * kdv;
+        var nettutar = tutar + kdvtutari;
+        document.write("girilen tutar: " + tutar + "<br/>");
+        document.write("gelen tutar kdvsi: " + kdvtutari + "<br/>");
+        document.write("toplam tutar: " + nettutar);
+      }
+      alim(1000, 8);
+
+      function parabirimi(birim, tutar) {
+        if (birim == "türk lirası") {
+          var kur = 1;
+        } else if (birim == "amerikan doları") {
+          var kur = 3;
+        } else if (birim == "euro") {
+          var kur = 4;
+        }
+        return tutarhesapla(kur, tutar);
+      }
+
+      function tutarhesapla(gelenkur, gelentutar) {
+        var hesap = gelenkur * gelentutar;
+        document.write(hesap);
+      }
+      parabirimi("amerikan doları", 200);
+    </script>
+  </body>
+</html>

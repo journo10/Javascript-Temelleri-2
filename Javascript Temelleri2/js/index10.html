@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var enbuyuk = Number.MAX_VALUE;
+      document.write(enbuyuk + "<br/>");
+
+      var enkucuk = Number.MIN_VALUE;
+      document.write(enkucuk + "<br/>");
+
+      var deger = Math.E;
+      document.write(deger + "<br/>");
+
+      var deger1 = Math.LN2;
+      document.write(deger1 + "<br/>");
+
+      var deger0 = Math.LN10;
+      document.write(deger0 + "<br/>");
+
+      var deger2 = Math.LOG2E;
+      document.write(deger2 + "<br/>");
+
+      var deger3 = Math.LOG10E;
+      document.write(deger3 + "<br/>");
+
+      var deger4 = Math.PI;
+      document.write(deger4 + "<br/>");
+
+      function akif(eleman, sıra, degisken) {
+        sonuc = eleman;
+        return eleman % 3 === 0;
+      }
+
+      var sonuc = 0;
+      var dizi1 = [10, 5, , 21, 47, 7, 11];
+      document.write(dizi1 + "<br/>");
+
+      dizi1.some(akif);
+      document.write(sonuc + "<br/>");
+
+      function akf(eleman, sıra, referans) {
+        son = eleman;
+        return eleman.length <= 5;
+      }
+
+      var son = "";
+      var d = ["siyah", "beyaz", "mavi", "yeşil", "gri", "kırmızı"];
+      document.write(d + "<br/>");
+
+      d.every(akf);
+      document.write(son + "<br/>");
+
+      function akif0(eleman, sıra, degişken) {
+        return eleman % 2 !== 0;
+      }
+
+      var s1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+      document.write(s1 + "<br/>");
+
+      var atama = s1.filter(akif0);
+      document.write(atama + "<br/>");
+
+      function deneme(eleman, sira, degisken) {
+        var sonuc = eleman * 50;
+        return sonuc;
+      }
+      var sy1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      document.write(sy1 + "<br/>");
+
+      var yeni = sy1.map(deneme);
+      document.write(yeni + "<br/>");
+
+      var metin = "merhaba akif bugün nasılsın?";
+      var düzenli = new RegExp("bugün"); // 1. yol
+      var sonuc = metin.match(düzenli);
+      var düzenli0 = / bugün /; // 2. yol
+      var sonuc0 = metin.match(düzenli0);
+      document.write(sonuc + "<br/>");
+      document.write(sonuc0 + "<br/>");
+
+      var metin = "merhaba akif nasılsın? senin adın akif mi? akif akif";
+      var düzenli = new RegExp("akif", "g");
+      var sonuc = metin.match(düzenli);
+      document.write(sonuc + "<br/>");
+      var düzenli0 = /akif/g;
+      var sonuc0 = metin.match(düzenli0);
+      document.write(sonuc0 + "<br/>");
+
+      var metin = "akif merhaba nasılsın? AKİF ";
+      var düzenli = new RegExp("akif", "gi");
+      var sonuc = metin.match(düzenli);
+      document.write(sonuc + "<br/>");
+      var düzenli0 = /akif/gi;
+      var sonuc0 = metin.match(düzenli0);
+      document.write(sonuc0 + "<br/>");
+
+      var metin = "akif gazetecilik";
+      var düzenli = new RegExp("gazetecilik");
+
+      var kontrol = düzenli.test(metin);
+      document.write(kontrol + "<br/>");
+
+      var metin = "bence javascript dili en güzel dildir";
+      var düzenli = new RegExp("javascript");
+      düzenli.test(metin);
+      var kontrol = RegExp.input;
+      document.write(kontrol);
+
+      var metin = "javascript dünyada en çok kullanılan dildir ";
+      var düzenli = new RegExp("dünyada", "g");
+      düzenli.test(metin);
+
+      var sonuc = RegExp.rightContext;
+      document.write(sonuc + "<br/>");
+      var sonuc0 = RegExp.leftContext;
+      document.write(sonuc0 + "<br/>");
+
+      var düzenli1 = new RegExp("javascript");
+      var s1 = metin.replace(düzenli1, "php");
+      document.write(s1 + "<br/>");
+
+      var metin = "merhaba akif,merhaba ceyhun, merhaba murat";
+      var düzenli2 = new RegExp("ceyhun|murat", "g");
+      var son = metin.replace(düzenli2, "akif");
+      document.write(son + "<br/>");
+
+      var metin = "javascript html css php react angular";
+      var d1 = new RegExp(" ", "g");
+      var s2 = metin.split(d1);
+      document.write(s2 + "<br/>");
+
+      var metin = "volkan Volkan VOLKAN";
+      var düzenli5 = new RegExp("volkan", "gi");
+      var sonuc = düzenli5.exec(metin);
+      document.write(sonuc + "<br/>");
+      var sonuc3 = düzenli5.exec(metin);
+      document.write(sonuc3 + "<br/>");
+      var sonuc7 = düzenli5.exec(metin);
+      document.write(sonuc7);
+
+      var isim = "merhaba akif merhaba ceyhun";
+      var düzenli = new RegExp("Akif", "i");
+      var sonuc1 = isim.match(düzenli);
+      document.write(sonuc1 + "<br/>");
+
+      düzenli.compile("Ceyhun", "i");
+      var sonuc2 = isim.match(düzenli);
+      document.write(sonuc2 + "<br/>");
+    </script>
+  </body>
+</html>

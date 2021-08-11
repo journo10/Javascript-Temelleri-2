@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var nesne = {
+        isim: "Ceyhun",
+        soyadi: "Yıldırım",
+        boy: 1.85,
+        kilo: 63,
+        dTarih: 1993,
+      };
+
+      var sonucİsim = nesne.isim;
+      var sonucSoyadi = nesne.soyadi;
+      var sonucBoy = nesne.boy;
+      var sonucKilo = nesne.kilo;
+      var sonucDtarih = nesne.dTarih;
+
+      document.write(
+        " Adı: " + sonucİsim,
+        " Soyadı: " + sonucSoyadi,
+        " Boy: " + sonucBoy,
+        " Kilo: " + sonucKilo,
+        " Doğum Tarihi: " + sonucDtarih
+      );
+
+      var nesne0 = new Object();
+      nesne0.isim = "Ceyhun";
+      nesne0.soyisim = "Yıldırım";
+      nesne0.dtarihi = 1993;
+
+      var isimyaz = nesne0.isim;
+      var soyisimyaz = nesne0.soyisim;
+      var Doğumtarihi = nesne0.dtarihi;
+
+      document.write(
+        " İsim: " + isimyaz,
+        " Soy İsim :" + soyisimyaz,
+        " Doğum Tarihi: " + Doğumtarihi
+      );
+
+      function akif() {
+        this.isim = "Ceyhun";
+        this.soyisim = "Yıldırım";
+        this.dTarih = 1993;
+      }
+      var kişi = new akif();
+      document.write(
+        " Adı: " + kişi.isim,
+        " Soyadı: " + kişi.soyisim,
+        " Doğum Tarihi: " + kişi.dTarih
+      );
+
+      function demo() {
+        this.adi = "Cihan";
+        this.soyadi = "Yıldırım";
+        this.doğumT = 1993;
+        this.kilo = 61;
+        this.boy = 1.83;
+      }
+      var kişiYaz = new demo();
+
+      document.write(
+        "ADI: " + kişiYaz.adi,
+        " SOYADI: " + kişiYaz.soyadi,
+        " DOĞUM TARİHİ: " + kişiYaz.doğumT,
+        " KİLO: " + kişiYaz.kilo,
+        " BOY: " + kişiYaz.boy
+      );
+
+      var kişi = { isim: "CEYHUN", soyisim: "YILDIRIM" },
+        renkler = { bİrinciR: "SARI", ikinciR: "KIRMIZI" };
+
+      var kişiYaz = kişi.isim;
+      var soyisimyaz = kişi.soyisim;
+      document.write(kişiYaz + " " + soyisimyaz + "<br/>");
+
+      var renkyaz = renkler.bİrinciR;
+      var renkyaz0 = renkler.ikinciR;
+      document.write(renkyaz + " " + renkyaz0);
+
+      var kişi = { isim: "CEYHUN", soyisim: "YILDIRIM" };
+      var örnek = kişi;
+
+      var kişiYaz = örnek.isim;
+      var soyisimyaz = örnek.soyisim;
+      document.write(kişiYaz + " " + soyisimyaz + "<br/>");
+
+      var kişi = {};
+      kişi.isim = "CEYHUN";
+      kişi.soyisim = "YILDIRIM";
+      kişi.kilo = 61;
+
+      var isimSoyisimKilo =
+        "ADI: " +
+        kişi.isim +
+        " SOYADI: " +
+        kişi.soyisim +
+        " KİLO: " +
+        kişi.kilo;
+      document.write(isimSoyisimKilo);
+
+      var kişi = { isim: "akif", soyadı: "kaya", kilo: 63 };
+      var yisim = kişi.isim;
+      var ysoyadı = kişi.soyadı;
+      var ykilo = kişi.kilo;
+
+      document.write(yisim + ysoyadı + ykilo + "<br/>");
+
+      kişi.kilo = 61;
+      var ykilo1 = kişi.kilo;
+      document.write(yisim + ysoyadı + ykilo1);
+
+      var kişi = {
+        isim: "akif",
+        soyadı: "kaya",
+        kilo: 63,
+        fonksiyon: function () {
+          alert("bu bir nesne iç fonksiyon kodudur...");
+        },
+      };
+      kişi.fonksiyon();
+
+      var kişi = {
+        isim: "akif",
+        soyadı: "kaya",
+        kilo: 63,
+        fonksiyon: function () {
+          prompt("bu bir nesne iç fonksiyon kodudur...");
+        },
+      };
+      kişi.fonksiyon();
+
+      var bilgi = {
+        isim: "CEYHUN",
+        soyisim: "YILDIRIM",
+        meslek: "GAZETECİ",
+        detay: function () {
+          var isimdegeri = bilgi.isim;
+          var soyisimdegeri = bilgi.soyisim;
+          var meslekdegeri = bilgi.meslek;
+          document.write(isimdegeri + " " + soyisimdegeri + " " + meslekdegeri);
+        },
+      };
+      bilgi.detay();
+
+      var bilgi = {
+        isim: "CEYHUN",
+        soyisim: "YILDIRIM",
+        meslek: "GAZETECİ",
+        detay: function () {
+          this.yas = 21;
+          this.il = "İSTANBUL";
+        },
+      };
+      bilgi.detay();
+      var isimdegeri = bilgi.isim;
+      var soyisimdegeri = bilgi.soyisim;
+      var meslekdegeri = bilgi.meslek;
+      var yasdegeri = bilgi.yas;
+      var ildegeri = bilgi.il;
+      document.write(
+        isimdegeri +
+          " " +
+          soyisimdegeri +
+          " " +
+          meslekdegeri +
+          " " +
+          yasdegeri +
+          " " +
+          ildegeri
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="demo">Akif</div>
+    <button onclick="deneme()">tıkla</button>
+
+    Akif'in en sevdiği hayvan <span name="hayvanadi">At</span> mı? Ceyhun'un en
+    sevdiği hayvan <span name="hayvanadi">Kelebek</span> mi? Cihan'ın en sevdiği
+    hayvan <span name="hayvanadi">Kedi</span> mi? <br />
+    Hayvan sayısı: <span id="hayvansayısı"></span>
+
+    Hobi Alanları : <br />
+    <input name="hobi" type="checkbox" value="Futbol" />Futbol <br />
+    <input name="hobi" type="checkbox" value="Sinema" />Sinema <br />
+    <input name="hobi" type="checkbox" value="Tiyatro" />Tiyatro <br />
+    <input name="hobi" type="checkbox" value="Yüzmek" />Yüzmek <br />
+    <input name="hobi" type="checkbox" value="Voleybol" />Voleybol <br />
+    <br />
+    <button onclick="sec() ">Tümünü Seç</button> <br />
+    <br />
+    <button onclick="kaldır() ">Tümünü Kaldır</button>
+
+    <script>
+      function sec() {
+        var sonuc = document.getElementsByName("hobi");
+        for (var baslangıc = 0; baslangıc < sonuc.length; baslangıc++) {
+          sonuc[baslangıc].checked = true;
+        }
+      }
+
+      function kaldır() {
+        var sonuc = document.getElementsByName("hobi");
+        for (baslangıc = 0; baslangıc < sonuc.length; baslangıc++) {
+          sonuc[baslangıc].checked = false;
+        }
+      }
+
+      function deneme() {
+        var sonuc = (document.getElementById("demo").innerHTML = "Gazetecilik");
+        alert(sonuc);
+        prompt(sonuc);
+      }
+
+      var sonuc = document.getElementsByName("hayvanadi").length;
+      document.getElementById("hayvansayısı").innerHTML = sonuc;
+    </script>
+  </body>
+</html>

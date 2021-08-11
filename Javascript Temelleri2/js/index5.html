@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function name(bir, iki) {
+        function name1(üç, dört) {
+          document.write(üç + "<br/>");
+          document.write(dört);
+        }
+        return name1(bir, iki);
+      }
+      name(9, 8);
+
+      function deneme(gaz, gaz1) {
+        function demo(son1, son2) {
+          document.write(son1 + "<br/>");
+          document.write(son2);
+        }
+        return demo(gaz, gaz1);
+      }
+      deneme(78, 32);
+
+      function akif(bir1, bir2) {
+        function mehmet(bir3) {
+          var sonuc = bir3 * bir3;
+          document.write(sonuc + "<br/>");
+        }
+        return mehmet(bir1) + mehmet(bir2);
+      }
+      akif(11, 13);
+
+      function bir(a, a1) {
+        function iki(b, b1) {
+          function uc(c, c1) {
+            return a * a1 * b * b1 * c * c1;
+          }
+          return uc;
+        }
+        return iki;
+      }
+      var sonuc = bir(5, 3)(7, 5)(9, 6);
+      document.write(sonuc);
+
+      function demobir(d1) {
+        function demoiki() {
+          function demouc() {
+            document.write(d1);
+          }
+          return demouc();
+        }
+        return demoiki();
+      }
+      demobir(8);
+      function demo(dş1, d2) {
+        if (dş1 <= d2) {
+          document.write("gazetecilik" + "<br/>");
+          dş1 += 1;
+          demo(dş1, d2);
+        } else {
+          return;
+        }
+      }
+      demo(1, 30);
+
+      function ornek(i, s, d, f, g, h, j, k) {
+        var sonuc = ornek.length;
+        document.write(sonuc);
+      }
+      ornek();
+
+      function demo() {
+        for (var baslangıc = 0; baslangıc < arguments.length; baslangıc++) {
+          document.write(arguments[baslangıc]);
+        }
+      }
+      demo("akif", "gazetecilik");
+
+      function deneme() {
+        for (var son = 0; son < deneme.caller.arguments.length; son++) {
+          document.write(demo.arguments[son]);
+        }
+      }
+      function demo() {
+        deneme();
+      }
+      demo("akif", "gazetecilik");
+    </script>
+  </body>
+</html>

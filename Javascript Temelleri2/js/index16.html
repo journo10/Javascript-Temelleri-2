@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    div {
+      border: 1px solid;
+      margin: 5px;
+      padding: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+  <div class="sınıf">Anasayfa</div>
+  <div class="sınıf1">İletişim</div>
+  <div class="sınıf1">Hakkımızda</div>
+  <div class="sınıf1">SSS</div>
+  <div class="sınıf">Ziyartçi</div>
+
+  <p id="enson"></p>
+  <body>
+    <script>
+      var sonuc = document.getElementsByClassName("sınıf1");
+      for (baslangıc = 0; baslangıc < sonuc.length; baslangıc++) {
+        sonuc[baslangıc].style.backgroundColor = "red";
+      }
+    </script>
+  </body>
+</html>
